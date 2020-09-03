@@ -1,0 +1,4 @@
+functions:
+  - name: function-file-replicator
+    runtime: nodejs14
+    handler: file-replicator.handler
