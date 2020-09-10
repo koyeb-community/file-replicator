@@ -31,7 +31,7 @@ const validateEnvironment = (bucket) => {
 
 const handler = async (event) => {
   const sourceBucket = event?.bucket?.name;
-  const destinatonBucket = pro.env.DESTINATION_STORE;
+  const destinatonBucket = process.env.DESTINATION_STORE;
   const key = event?.object?.key;
 
   validateEnvironment(sourceBucket);
