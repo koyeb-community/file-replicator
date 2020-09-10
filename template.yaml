@@ -14,10 +14,4 @@ template: |
     - name: {{ .DESTINATION_STORE }}
       store: {{ .DESTINATION_STORE }}
     events:
-      - cloudevent:
-          expression: |
-            event.source == "koyeb.com/gateway" &&
-            event.subject == "{{ .STORE }}" &&
-            event.type.matches("s3:ObjectCreated:.*") &&
-            !data.object.key.startsWith("{{ .REKOGNITION_FILE_REFIX }}") &&
-            data.object.key.matches("([^\\s]+(\\.(?i)(jpe?g|png))$)")
+      - store: {{ .STORE }}
