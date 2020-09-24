@@ -50,7 +50,7 @@ const handler = async (event) => {
   try {
     const response = await s3InstanceSrc
       .getObject({
-        Bucket: bucket,
+        Bucket: sourceBucket,
         Key: key,
       })
       .promise();
