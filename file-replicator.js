@@ -32,6 +32,13 @@ const validateEnvironment = (bucket) => {
 const handler = async (event) => {
   const sourceBucket = event?.bucket?.name;
   const destinatonBucket = process.env.DESTINATION_STORE;
+
+  if (sourceBucket === destinatonBucket) {
+    throw new Error(
+      `The SOURCE_STORE and DESTINATION_STORE can't be the same.`
+    );
+  }
+
   const key = event?.object?.key;
 
   validateEnvironment(sourceBucket);

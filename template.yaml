@@ -1,13 +1,15 @@
 parameters:
-    - name: STORE
-      description: "The store to watch to trigger the function and save the AWS Rekognition result."
+    - name: SOURCE_STORE
+      description: "The source store to watch the file events."
       type: STORE_REF
       required: true
     - name: DESTINATION_STORE
-      description: "The destination store to copy the data."
+      description: "The destination store to copy the data coming from the source store."
       type: STORE_REF
       required: true
 template: |
+    env:
+      DESTINATION_STORE: {{ .DESTINATION_STORE }}
     volumes:
     - name: {{ .STORE }}
       store: {{ .STORE }}
