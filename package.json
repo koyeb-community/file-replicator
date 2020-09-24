@@ -1,6 +1,6 @@
 {
   "name": "function-file-replicator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "./file-replicator.js",
   "homepage": "https://www.koyeb.com",
   "repository": "https://github.com/koyeb-community/function-file-replicator",

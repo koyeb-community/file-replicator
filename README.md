@@ -1,7 +1,7 @@
 ---
 display_name: File replicator
 status: ACTIVE
-version: 1.0.1
+version: 1.0.2
 ---
 
 ## Summary
