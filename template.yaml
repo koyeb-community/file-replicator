@@ -11,9 +11,9 @@ template: |
     env:
       DESTINATION_STORE: {{ .DESTINATION_STORE }}
     volumes:
-    - name: {{ .STORE }}
-      store: {{ .STORE }}
+    - name: {{ .SOURCE_STORE }}
+      store: {{ .SOURCE_STORE }}
     - name: {{ .DESTINATION_STORE }}
       store: {{ .DESTINATION_STORE }}
     events:
-      - store: {{ .STORE }}
+      - store: {{ .SOURCE_STORE }}
