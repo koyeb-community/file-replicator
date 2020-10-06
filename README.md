@@ -30,6 +30,6 @@ This function is triggered each time an object is created in the Store you use.
 
 Below is what you need to use this function:
 
-* A Koyeb valid account
+* A Koyeb account
 * A source Store where you upload your data
 * An additional destination Store where your replicated data will be stored
