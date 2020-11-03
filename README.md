@@ -1,7 +1,7 @@
 ---
 display_name: File replicator
 status: ACTIVE
-version: 1.0.2
+short_description: A simple way to replicate files coming from a Store to another.
 ---
 
 ## Summary
